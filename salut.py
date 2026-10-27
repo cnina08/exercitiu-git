@@ -1,1 +1,1 @@
-
+print("Salut, GitHub!"
