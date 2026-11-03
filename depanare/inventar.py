@@ -37,16 +37,16 @@ def peste_prag(tinte, prag):
     """Lista gazdelor cu un port mai mare decat pragul."""
     rezultat = []
     for t in tinte:
-        port = int(t["port"])
+        port = int(t["port"]) 
         if port > prag:
             rezultat.append(t["gazda"])
-        return rezultat
+    return rezultat
 
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("fisier")
-    p.add_argument("--prag", default=1024)
+    p.add_argument("--prag", type=int, default=1000)
     a = p.parse_args()
 
     tinte = incarca(a.fisier)
